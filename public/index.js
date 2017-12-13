@@ -39,17 +39,24 @@ const populateList = function(beers) {
    });
  }
 
-const createImage = function(url) {
-  const image = document.createElement('img');
-  image.src = url;
-  return image;
-}
+// const loopOverBeers = function(beers) {
+//   // const ul = document.querySelector('#beer-list');
+//   beers.forEach(function(beer){
+//     return beer;
+//   })
+// }
 
-const createLi = function(text) {
-  const listItem = document.createElement('li');
-  listItem.innerText = text || '';
-  return listItem;
-}
+// const createImage = function(url) {
+//   const image = document.createElement('img');
+//   image.src = url;
+//   return image;
+// }
+//
+// const createLi = function(text) {
+//   const listItem = document.createElement('li');
+//   listItem.innerText = text || '';
+//   return listItem;
+// }
 
 const appendChildren = function(liName, liImage, image) {
  const ul = document.querySelector('#beer-list');
