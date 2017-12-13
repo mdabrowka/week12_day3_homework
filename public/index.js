@@ -31,10 +31,31 @@ const populateList = function(beers) {
      liImage.innerText = "";
      const image = document.createElement('img');
      image.src = beer.image_url;
-    liImage.appendChild(image);
-    ul.appendChild(liName);
-    ul.appendChild(liImage);
+    // liImage.appendChild(image);
+    // ul.appendChild(liName);
+    // ul.appendChild(liImage);
+    appendChildren(liName, liImage, image);
    });
  }
+
+const createImage = function(url) {
+  const image = document.createElement('img');
+  image.src = url;
+  return image;
+}
+
+const createLi = function(text) {
+  const listItem = document.createElement('li');
+  listItem.innerText = text || '';
+  return listItem;
+}
+
+// const appendChildren = function(liName, liImage, image) {
+//  const ul = document.querySelector('#beer-list');
+//  liImage.appendChild(image);
+//  ul.appendChild(liName);
+//  ul.appendChild(liImage);
+// }
+
 
 document.addEventListener('DOMContentLoaded', app);
