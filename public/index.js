@@ -30,10 +30,11 @@ const populateList = function(beers) {
      const liImage = document.createElement('li');
      liImage.innerText = "";
      const image = document.createElement('img');
-     image.src = beer.image_url;
-    // liImage.appendChild(image);
-    // ul.appendChild(liName);
-    // ul.appendChild(liImage);
+      image.src = beer.image_url;
+     // createImage(beer.url);
+     // liImage.appendChild(image);
+     // ul.appendChild(liName);
+     // ul.appendChild(liImage);
     appendChildren(liName, liImage, image);
    });
  }
@@ -50,12 +51,12 @@ const createLi = function(text) {
   return listItem;
 }
 
-// const appendChildren = function(liName, liImage, image) {
-//  const ul = document.querySelector('#beer-list');
-//  liImage.appendChild(image);
-//  ul.appendChild(liName);
-//  ul.appendChild(liImage);
-// }
+const appendChildren = function(liName, liImage, image) {
+ const ul = document.querySelector('#beer-list');
+ ul.appendChild(liName);
+ liImage.appendChild(image);
+ ul.appendChild(liImage);
+}
 
 
 document.addEventListener('DOMContentLoaded', app);
