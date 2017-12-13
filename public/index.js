@@ -22,13 +22,18 @@ const requestComplete = function() {
     populateList(beers);
 }
 
-
 const populateList = function(beers) {
    const ul = document.querySelector('#beer-list');
    beers.forEach(function(beer) {
-     const li = document.createElement('li');
-     li.innerText = beer.name;
-    ul.appendChild(li);
+     const liName = document.createElement('li');
+     liName.innerText = beer.name;
+     const liImage = document.createElement('li');
+     liImage.innerText = "";
+     const image = document.createElement('img');
+     image.src = beer.image_url;
+    liImage.appendChild(image);
+    ul.appendChild(liName);
+    ul.appendChild(liImage);
    });
  }
 
